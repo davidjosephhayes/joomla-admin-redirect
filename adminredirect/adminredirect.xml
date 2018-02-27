@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method="upgrade">
+	<name>User - Admin Redirect</name>
+	<version>0.0.1</version>
+    <description><![CDATA[<p>Admin Redirect for Joomla 3.1.x. Created by <a href="https://blackbricksoftware.com/" target="_blank">Black Brick Software LLC</a>.</p>]]></description>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Black Brick Software LLC</author>
+	<authorEmail>david@blackbricksoftware.com</authorEmail>
+	<authorUrl>https://blackbricksoftware.com</authorUrl>
+    <copyright>Copyright © 2015 Black Brick Software LLC. All rights reserved.</copyright>
+    <creationDate>2 October 2015</creationDate>
+	<files>
+		<folder>language</folder>
+		<filename plugin="adminredirect">adminredirect.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_adminredirect.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="redirecturl" type="text" default="" label="Redirect URL" description="URL to redirect to relative to the Joomla Admin base" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
