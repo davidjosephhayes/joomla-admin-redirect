@@ -24,8 +24,12 @@ class PlgUserAdminRedirect extends JPlugin {
 
 		$app = JFactory::getApplication(); 
 		$redirecturl = $this->params->get('redirecturl');
+
+		// undocumented feature: prevent the redirect 
+		$session = JFactory::getSession();
+		$skipredirect = $session->get('adminredirect-skip', false);
 		
-		if (!$app->isAdmin()||empty($redirecturl)) return;
+		if (!$app->isAdmin()||empty($redirecturl)||$skipredirect) return;
 		
 		//~ echo pre($redirecturl); exit;
 		
